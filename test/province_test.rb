@@ -35,6 +35,12 @@ class ProvinceTest < Minitest::Test
       assert_equal(-26, @asia.shortfall)
       assert_equal(-10, @asia.profit)
     end
+
+    #def test_province_empty_string_demand
+      #@asia.demand = ""
+      #assert(!(@asia.shortfall.is_a? Numeric))
+      #assert(!(@asia.profit.is_a? Numeric))
+    #end
   end
 
   describe 'no producers' do
@@ -56,4 +62,17 @@ class ProvinceTest < Minitest::Test
       assert_equal(0, @noProducers.profit)
     end
   end
+
+  #describe 'string for producers' do
+    #def test_string_producers_shortfall
+      #data = {
+      #  name: "String proudcers",
+      #  producers: "",
+      #  demand: 30,
+      #  price: 20
+      #}
+      #prov = Province.new(data)
+      #assert_equal(0, prov.shortfall)
+    #end
+  #end
 end
